@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Tribhuwan Shanti Secondary School | Pre-Primary Level</title>
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Early childhood education at Shree Tribhuwan Shanti Model Secondary School. A playful and nurturing start for children in Nursery, LKG, and UKG."
+    />
+    <meta name="keywords" content="stsss pre-primary, Nursery Pokhara, LKG UKG Pokhara, early childhood Kaski">
+    <meta name="author" content="Shree Tribhuwan Shanti Secondary School" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg_major: "#0A1535",
+              bg_minor: "#FFFFFF",
+              txt_major: "#0A1535",
+              txt_minor: "#FFFFFF"
+            }
+          }
+        }
+      };
+    </script>
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <!-- Components -->
+    <script src="/js/components/SchoolHeader.js" type="module"></script>
+    <script src="/js/components/SchoolFooter.js" type="module"></script>
+  </head>
+
+  <body class="font-sans bg-gray-50 text-[#0A1535] overflow-x-hidden">
+    <school-header></school-header>
+
+    <main class="pt-20 pb-20">
+      <section class="relative py-24 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
+         <div class="absolute top-0 right-0 w-[40%] h-full bg-blue-600/5 -skew-x-12 translate-x-1/2"></div>
+         
+         <div class="container mx-auto px-6 md:px-12 relative z-10">
+            <div data-aos="fade-up" class="text-center max-w-3xl mx-auto mb-16">
+               <h1 class="text-4xl md:text-6xl font-black mb-4">Pre-Primary Level</h1>
+               <p class="text-xl text-blue-600 font-bold uppercase tracking-widest mb-8">Nursery | LKG | UKG</p>
+               <p class="text-lg text-gray-500 leading-relaxed italic">"Every child's journey starts with a playful step toward discovery."</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-gray-50 hover:border-blue-200 transition" data-aos="fade-up">
+                  <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-yellow-600 mb-8"><i class="fa-solid fa-puzzle-piece text-3xl"></i></div>
+                  <h4 class="text-xl font-bold mb-4">Play-Way Method</h4>
+                  <p class="text-gray-500 leading-relaxed">Learning through games, music, and interactive activities to keep children engaged and happy.</p>
+               </div>
+               <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-gray-50 hover:border-blue-200 transition" data-aos="fade-up" data-aos-delay="100">
+                  <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center text-pink-600 mb-8"><i class="fa-solid fa-sun text-3xl"></i></div>
+                  <h4 class="text-xl font-bold mb-4">Safe Environment</h4>
+                  <p class="text-gray-500 leading-relaxed">A nurturing space where children feel secure, loved, and encouraged to be themselves.</p>
+               </div>
+               <div class="bg-white p-10 rounded-[2rem] shadow-xl border border-gray-50 hover:border-blue-200 transition" data-aos="fade-up" data-aos-delay="200">
+                  <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 mb-8"><i class="fa-solid fa-leaf text-3xl"></i></div>
+                  <h4 class="text-xl font-bold mb-4">Holistic Care</h4>
+                  <p class="text-gray-500 leading-relaxed">Focusing on physical growth, social behavior, and creative expression from a very young age.</p>
+               </div>
+            </div>
+            
+            <div class="mt-20 text-center" data-aos="zoom-in">
+               <a href="/pages/admission/" class="bg-[#0A1535] text-white px-12 py-5 rounded-2xl font-bold text-lg shadow-xl hover:bg-blue-950 transition">Begin Your Child's Journey</a>
+            </div>
+         </div>
+      </section>
+    </main>
+
+    <school-footer></school-footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+  </body>
+</html>

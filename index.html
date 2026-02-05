@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="refresh" content="900" />
+    <meta name="description" content="Shree Tribhuwan Shanti Model Secondary School, Pokhara-30, Khudi, Dhungepatan. Top government school in Kaski providing quality education since 1969." />
+    <meta name="keywords" content="tribhuwan shanti, school pokhara, best school kaski, stsss, government school pokhara" />
+    <meta name="author" content="Shree Tribhuwan Shanti Secondary School" />
+    <title>Shree Tribhuwan Shanti Secondary School</title>
+    
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+     <!-- Tailwind Config -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+         tailwind.config = {
+             theme: {
+                 extend: {
+                     fontFamily: {
+                         sans: ['Outfit', 'sans-serif'],
+                         heading: ['Poppins', 'sans-serif'],
+                     },
+                     colors: {
+                         bg_major: '#0A1535',
+                         bg_minor: '#FFFFFF',
+                         txt_major: '#0A1535',
+                         txt_minor: '#FFFFFF',
+                         txt_special: '#ffffff',
+                     }
+                 }
+             }
+         }
+     </script>
+
+     <style>
+         .text-shadow-hero {
+             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+         }
+         .glass-card {
+             background: rgba(10, 21, 53, 0.95);
+             backdrop-filter: blur(10px);
+             border: 1px solid rgba(255, 255, 255, 0.1);
+         }
+     </style>
+
+     <!-- Component Scripts -->
+     <script type="module" src="/js/components/SchoolHeader.js"></script>
+     <script type="module" src="/js/components/SchoolFooter.js"></script>
+  </head>
+
+  <body class="font-sans antialiased text-[#0A1535] overflow-x-hidden">
+    
+    <!-- Reusable Header -->
+    <school-header></school-header>
+
+    <main class="pt-20">
+      
+      <!-- Notice Marquee -->
+      <article class="bg-[#0A1535] text-white h-10 flex items-center relative z-40 border-b border-gray-800">
+        <div class="bg-red-600 h-full flex items-center px-4 md:px-6 font-bold text-xs md:text-sm uppercase tracking-wider shadow-lg z-10">
+          Notice
+        </div>
+        <div class="flex-1 overflow-hidden flex items-center">
+          <marquee id="noticeHeaderSliding" class="text-sm font-medium tracking-wide py-2" onmouseover="this.stop()" onmouseout="this.start()">
+            Welcome to Shree Tribhuwan Shanti Secondary School - Estd. 1969 A.D.
+          </marquee>
+        </div>
+      </article>
+
+      <!-- Hero Section -->
+      <section class="relative h-[85vh] flex items-center bg-cover bg-right lg:bg-fixed" style="background-image: url('/img/bk.png')">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20 z-0"></div>
+
+        <div class="container mx-auto px-6 md:px-12 relative z-10 h-full flex flex-col justify-center pb-20">
+          <div class="max-w-4xl">
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 leading-tight text-shadow-hero" data-aos="fade-up" data-aos-duration="1000">
+              Shree Tribhuwan Shanti <span class="hidden md:block"></span> <span class="text-blue-200">Secondary School</span>
+            </h1>
+            <h3 class="text-xl md:text-3xl text-gray-200 font-medium mb-6 text-shadow-hero" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+              Since 2026 B.S. / 1969 A.D.
+            </h3>
+            
+            <p class="text-gray-100 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed font-light text-shadow-hero" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+              <span class="text-blue-200 hidden md:block">"One goal, one mission. Our children, our nation."</span><br>
+              Cultivating academic excellence and strong humanitarian ethos in a disciplined, modern environment.
+            </p>
+
+            <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+              <a href="/pages/about/overview/" class="bg-white text-[#0A1535] hover:bg-blue-50 hover:scale-105 transform transition-all px-8 py-3 rounded-full font-bold shadow-lg">
+                Explore More
+              </a>
+              <a href="/pages/admission/" class="bg-[#0A1535] text-white border-2 border-[#0A1535] hover:bg-transparent hover:border-white hover:text-white px-8 py-3 rounded-full font-bold shadow-lg transition-all">
+                Admissions
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Info Cards -->
+        <div class="absolute bottom-0 left-0 w-full transform translate-y-1/2 z-20 px-6 md:px-12 hidden md:block">
+          <div class="container mx-auto">
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card p-6 rounded-xl shadow-2xl text-white transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                   <div class="flex items-center space-x-4 mb-3">
+                      <div class="p-3 bg-white/10 rounded-lg">
+                         <i class="fa-solid fa-scroll text-2xl text-blue-200"></i>
+                      </div>
+                      <h3 class="text-xl font-bold">Notice & Updates</h3>
+                   </div>
+                   <p class="text-gray-300 text-sm mb-4">Stay informed with the latest school announcements and official notices.</p>
+                   <a href="/pages/about/notice/" class="text-blue-200 hover:text-white text-sm font-semibold flex items-center group">
+                      View Notices <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                   </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-6 rounded-xl shadow-2xl text-white transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                   <div class="flex items-center space-x-4 mb-3">
+                      <div class="p-3 bg-white/10 rounded-lg">
+                         <i class="fa-solid fa-trophy text-2xl text-yellow-400"></i>
+                      </div>
+                      <h3 class="text-xl font-bold">Sports & Games</h3>
+                   </div>
+                   <p class="text-gray-300 text-sm mb-4">Discover our sports achievements and extracurricular activities.</p>
+                   <a href="/pages/facilities/sportsGames/" class="text-blue-200 hover:text-white text-sm font-semibold flex items-center group">
+                      Learn More <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                   </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-6 rounded-xl shadow-2xl text-white transform hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                   <div class="flex items-center space-x-4 mb-3">
+                      <div class="p-3 bg-white/10 rounded-lg">
+                         <i class="fa-solid fa-graduation-cap text-2xl text-green-400"></i>
+                      </div>
+                      <h3 class="text-xl font-bold">Academic Updates</h3>
+                   </div>
+                   <p class="text-gray-300 text-sm mb-4">Check out recent academic results, exam schedules, and curriculum updates.</p>
+                   <a href="/pages/about/academics/" class="text-blue-200 hover:text-white text-sm font-semibold flex items-center group">
+                      Read News <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                   </a>
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Updates Section -->
+      <section class="py-20 bg-gray-50 mt-4 md:mt-32">
+        <div class="container mx-auto px-6 md:px-12">
+           <div class="text-center mb-12">
+              <h2 class="text-3xl md:text-4xl font-bold text-[#0A1535] mb-4">Latest Updates</h2>
+              <div class="w-20 h-1 bg-red-600 mx-auto rounded-full"></div>
+           </div>
+           
+           <div id="mainContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Content loaded by headerNotice.js -->
+           </div>
+
+           <div class="text-center mt-12">
+              <a href="/pages/about/notice/" class="inline-block px-8 py-3 bg-[#0A1535] text-white font-semibold rounded-lg hover:bg-blue-900 transition-colors shadow-lg">
+                 View All Notices
+              </a>
+           </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="py-20 bg-white">
+         <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+               <!-- Content -->
+               <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                  <h4 class="text-red-600 font-bold uppercase tracking-wider mb-2">About Us</h4>
+                  <h2 class="text-4xl md:text-5xl font-bold text-[#0A1535] mb-6 leading-tight">Empowering Future Leaders Since 1969</h2>
+                  <p class="text-gray-600 text-lg mb-6 leading-relaxed text-justify">
+                     Shree Tribhuwan Shanti Secondary School in Kaski emphasizes humanity, cultural, moral, and spiritual values alongside academic knowledge. Our mission is to develop well-rounded, thoughtful, and confident students capable of navigating the ever-changing global landscape.
+                  </p>
+                  
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                     <div class="flex items-center space-x-3 text-[#0A1535] font-medium">
+                        <i class="fa-solid fa-circle-check text-green-500"></i>
+                        <span>Activity-based education</span>
+                     </div>
+                     <div class="flex items-center space-x-3 text-[#0A1535] font-medium">
+                        <i class="fa-solid fa-circle-check text-green-500"></i>
+                        <span>Competitive environment</span>
+                     </div>
+                     <div class="flex items-center space-x-3 text-[#0A1535] font-medium">
+                        <i class="fa-solid fa-circle-check text-green-500"></i>
+                        <span>Individualized attention</span>
+                     </div>
+                     <div class="flex items-center space-x-3 text-[#0A1535] font-medium">
+                        <i class="fa-solid fa-circle-check text-green-500"></i>
+                        <span>Experienced faculty</span>
+                     </div>
+                  </div>
+
+                  <a href="/pages/about/overview/" class="inline-flex items-center text-[#0A1535] font-bold border-b-2 border-[#0A1535] pb-1 hover:text-blue-700 hover:border-blue-700 transition-colors">
+                     Read Full Story <i class="fa-solid fa-arrow-right ml-2"></i>
+                  </a>
+               </div>
+
+               <!-- Images -->
+               <div class="lg:w-1/2 relative" data-aos="fade-left" data-aos-duration="1000">
+                  <div class="grid grid-cols-2 gap-4">
+                     <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1719334934/if2mg4ghnkpqslo9ebot.jpg" alt="School Life" class="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8">
+                     <img src="/img/friends_dev.jpg" alt="Students" class="rounded-2xl shadow-lg w-full h-64 object-cover object-right">
+                  </div>
+                  <!-- Decorative Element -->
+                  <div class="absolute -z-10 top-0 right-0 w-32 h-32 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+                  <div class="absolute -z-10 bottom-0 left-0 w-32 h-32 bg-red-50 rounded-full blur-3xl opacity-50"></div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Curriculum Section -->
+      <section class="bg-[#0A1535] text-white body-font py-20">
+        <div class="container px-6 md:px-12 mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Curriculum</h2>
+             <div class="w-20 h-1 bg-white mx-auto rounded-full opacity-50"></div>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <!-- Pre-Primary -->
+            <div data-aos="zoom-in" data-aos-duration="1000" class="p-4 md:w-1/3">
+              <div class="h-full bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300">
+                <img class="lg:h-56 md:h-40 w-full object-cover object-center" src="https://res.cloudinary.com/dzioycr1r/image/upload/v1719305215/zt6ndaltibenghcy1qwj.jpg" alt="Pre-Primary">
+                <div class="p-8">
+                  <h3 class="text-xl font-bold mb-1 text-blue-200">Pre-Primary</h3>
+                  <h4 class="text-sm font-medium mb-4 text-gray-400 uppercase tracking-widest">(Nursery To UKG)</h4>
+                  <p class="leading-relaxed mb-6 font-light text-gray-300">
+                    A secure, supportive environment with engaging activities. Dedicated teachers foster a love for learning through creative play.
+                  </p>
+                  <a href="/pages/admission/" class="text-white inline-flex items-center font-semibold hover:text-blue-300 transition-colors">
+                    Book Seats <i class="fa-solid fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Basic -->
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100" class="p-4 md:w-1/3">
+              <div class="h-full bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300">
+                <img class="lg:h-56 md:h-40 w-full object-cover object-center" src="https://res.cloudinary.com/dzioycr1r/image/upload/v1719305205/or1jnipwbx9irp6n0s7z.jpg" alt="Basic Level">
+                <div class="p-8">
+                  <h3 class="text-xl font-bold mb-1 text-blue-200">Basic Level</h3>
+                  <h4 class="text-sm font-medium mb-4 text-gray-400 uppercase tracking-widest">(Grade I - VIII)</h4>
+                  <p class="leading-relaxed mb-6 font-light text-gray-300">
+                    Dynamic learning environment with interactive activities. We cultivate a passion for knowledge and ensure comprehensive support.
+                  </p>
+                  <a href="/pages/admission/" class="text-white inline-flex items-center font-semibold hover:text-blue-300 transition-colors">
+                    Book Seats <i class="fa-solid fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Secondary -->
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200" class="p-4 md:w-1/3">
+              <div class="h-full bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300">
+                <img class="lg:h-56 md:h-40 w-full object-cover object-center" src="https://res.cloudinary.com/dzioycr1r/image/upload/v1719305209/kcokjgg4maam8ztswe6j.jpg" alt="Secondary">
+                <div class="p-8">
+                  <h3 class="text-xl font-bold mb-1 text-blue-200">Secondary Level</h3>
+                  <h4 class="text-sm font-medium mb-4 text-gray-400 uppercase tracking-widest">(Grade IX - XII)</h4>
+                  <p class="leading-relaxed mb-6 font-light text-gray-300">
+                    Equipped with modern tools and smart boards. Interactive and practical lessons preparing students for academic success.
+                  </p>
+                  <a href="/pages/admission/" class="text-white inline-flex items-center font-semibold hover:text-blue-300 transition-colors">
+                    Book Seats <i class="fa-solid fa-arrow-right ml-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Facilities Section -->
+      <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:px-12">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#0A1535] mb-4">Our Facilities</h2>
+            <div class="w-20 h-1 bg-red-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Transportation -->
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up">
+               <img src="./icons/home/bus.png" alt="Bus" class="h-16 mx-auto mb-4">
+               <h3 class="font-bold text-[#0A1535] text-lg mb-2">Transport</h3>
+               <a href="/pages/facilities/transportation/" class="text-sm text-blue-600 hover:underline">Learn More</a>
+            </div>
+             <!-- Computer Lab -->
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+               <img src="./icons/home/computer.png" alt="Computer" class="h-16 mx-auto mb-4">
+               <h3 class="font-bold text-[#0A1535] text-lg mb-2">Computer Lab</h3>
+               <a href="/pages/facilities/computer/" class="text-sm text-blue-600 hover:underline">Learn More</a>
+            </div>
+             <!-- Medicare -->
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+               <img src="./icons/home/health.png" alt="Health" class="h-16 mx-auto mb-4">
+               <h3 class="font-bold text-[#0A1535] text-lg mb-2">Medicare</h3>
+               <a href="/pages/facilities/medicare/" class="text-sm text-blue-600 hover:underline">Learn More</a>
+            </div>
+             <!-- Sports -->
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+               <img src="./icons/home/sports.png" alt="Sports" class="h-16 mx-auto mb-4">
+               <h3 class="font-bold text-[#0A1535] text-lg mb-2">Sports</h3>
+               <a href="/pages/facilities/sportsGames/" class="text-sm text-blue-600 hover:underline">Learn More</a>
+            </div>
+            <!-- Library -->
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up">
+               <img src="./icons/home/library.png" alt="Library" class="h-16 mx-auto mb-4">
+               <h3 class="font-bold text-[#0A1535] text-lg mb-2">Library</h3>
+               <a href="/pages/facilities/library/" class="text-sm text-blue-600 hover:underline">Learn More</a>
+            </div>
+            <!-- Science Lab -->
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+               <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1719398584/pvfd7bxpy6kuilgjb7qg.png" alt="Science" class="h-16 mx-auto mb-4 object-contain">
+               <h3 class="font-bold text-[#0A1535] text-lg mb-2">Science Lab</h3>
+               <a href="/pages/facilities/scienceLab/" class="text-sm text-blue-600 hover:underline">Learn More</a>
+            </div>
+             <!-- Smart Class -->
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+               <img src="./icons/home/dgroom.png" alt="Smart Class" class="h-16 mx-auto mb-4">
+               <h3 class="font-bold text-[#0A1535] text-lg mb-2">Smart Class</h3>
+               <a href="/pages/facilities/dgClass/" class="text-sm text-blue-600 hover:underline">Learn More</a>
+            </div>
+             <!-- Skill Program -->
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+               <img src="./icons/home/skill.png" alt="Skill" class="h-16 mx-auto mb-4">
+               <h3 class="font-bold text-[#0A1535] text-lg mb-2">Skill Program</h3>
+               <a href="#" class="text-sm text-blue-600 hover:underline">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Management Team -->
+<section class="bg-[#0A1535] text-white py-20">
+   <div class="container mx-auto px-6 md:px-12">
+      <div class="text-center mb-16">
+         <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Management Team</h2>
+         <div class="w-20 h-1 bg-white mx-auto rounded-full opacity-50"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+         <!-- Member 1 -->
+         <div data-aos="fade-up" data-aos-duration="1000">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all h-full">
+               <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1770318151/WhatsApp_Image_2026-02-06_at_00.47.06_ubzrme.jpg" alt="Nabaraj Sapkota" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+               <h3 class="text-xl font-bold mb-1">Nagendra Regmi</h3>
+               <p class="text-blue-200 text-sm mb-2">Chair Person</p>
+               <p class="text-xs text-gray-400"> Tribhuwan University</p>
+            </div>
+         </div>
+         
+         <!-- Member 2 -->
+         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all h-full">
+               <img src="./img/staffs/skl.png" alt="Somat Kumari" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+               <h3 class="text-xl font-bold mb-1">Somat Kumari</h3>
+               <p class="text-blue-200 text-sm mb-2">Head Teacher</p>
+               <p class="text-xs text-gray-400">Masters in Nepali</p>
+            </div>
+         </div>
+         
+         <!-- Member 3 -->
+         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all h-full">
+               <img src="./img/staffs/rcb.png" alt="Ram Chandra" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+               <h3 class="text-xl font-bold mb-1">Dr. Ram Chandra Bhandari</h3>
+               <p class="text-blue-200 text-sm mb-2">Asst. Head Teacher</p>
+               <p class="text-xs text-gray-400">Ph.D Holder</p>
+            </div>
+         </div>
+         
+         <!-- Member 4 -->
+         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all h-full">
+               <img src="./img/staffs/kra.png" alt="Kamal Raj" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+               <h3 class="text-xl font-bold mb-1">Kamal Raj</h3>
+               <p class="text-blue-200 text-sm mb-2">Asst. Head Teacher</p>
+               <p class="text-xs text-gray-400">Masters in English</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+      <!-- Stats Section -->
+      <section class="py-16 bg-white">
+         <div class="container mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+               <div class="p-6 border rounded-xl border-gray-100 hover:shadow-lg transition-all" data-aos="zoom-in">
+                  <h3 class="text-4xl font-bold text-[#0A1535] mb-2">1.6K+</h3>
+                  <p class="text-gray-500 font-medium">Students</p>
+               </div>
+               <div class="p-6 border rounded-xl border-gray-100 hover:shadow-lg transition-all" data-aos="zoom-in" data-aos-delay="100">
+                  <h3 class="text-4xl font-bold text-[#0A1535] mb-2">100+</h3>
+                  <p class="text-gray-500 font-medium">Teachers</p>
+               </div>
+               <div class="p-6 border rounded-xl border-gray-100 hover:shadow-lg transition-all" data-aos="zoom-in" data-aos-delay="200">
+                  <h3 class="text-4xl font-bold text-[#0A1535] mb-2">98%</h3>
+                  <p class="text-gray-500 font-medium">Success Rate</p>
+               </div>
+                <div class="p-6 border rounded-xl border-gray-100 hover:shadow-lg transition-all" data-aos="zoom-in" data-aos-delay="300">
+                  <h3 class="text-4xl font-bold text-[#0A1535] mb-2">55+</h3>
+                  <p class="text-gray-500 font-medium">Years of Excellence</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="py-20 bg-gray-50">
+         <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+               <h2 class="text-3xl md:text-4xl font-bold text-[#0A1535] mb-4">What Parents Say</h2>
+               <div class="w-20 h-1 bg-red-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+               <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                  <div class="flex items-center mb-6">
+                     <img src="./img/home/profile.avif" alt="Parent" class="w-12 h-12 rounded-full object-cover mr-4">
+                     <div>
+                        <h4 class="font-bold text-[#0A1535]">Rajeswor Tiwari</h4>
+                        <p class="text-xs text-gray-500 uppercase">Parent</p>
+                     </div>
+                  </div>
+                  <p class="text-gray-600 text-sm leading-relaxed italic">"As a parent of a four-year STSMSS student, I'm thoroughly impressed. The diverse academic offerings ensure comprehensive education."</p>
+               </div>
+
+               <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                  <div class="flex items-center mb-6">
+                     <img src="./img/home/profile.avif" alt="Parent" class="w-12 h-12 rounded-full object-cover mr-4">
+                     <div>
+                        <h4 class="font-bold text-[#0A1535]">Sanju Baniya</h4>
+                        <p class="text-xs text-gray-500 uppercase">Parent</p>
+                     </div>
+                  </div>
+                  <p class="text-gray-600 text-sm leading-relaxed italic">"Having enrolled my child at STSMSS for five years, I'm incredibly impressed. Dedicated faculty and state-of-the-art facilities."</p>
+               </div>
+
+               <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                  <div class="flex items-center mb-6">
+                     <img src="./img/home/profile.avif" alt="Parent" class="w-12 h-12 rounded-full object-cover mr-4">
+                     <div>
+                        <h4 class="font-bold text-[#0A1535]">Hem Bahadur Pun</h4>
+                        <p class="text-xs text-gray-500 uppercase">Parent</p>
+                     </div>
+                  </div>
+                  <p class="text-gray-600 text-sm leading-relaxed italic">"The school offers diverse academic programs in Science and Technology. The dedicated faculty have greatly supported my child's development."</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Contact Section -->
+      
+
+    </main>
+
+    <!-- Reusable Footer -->
+    <school-footer></school-footer>
+
+    <!-- Scripts -->
+    <script src="/js/headerNotice.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          offset: 100,
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true,
+      });
+    </script>
+  </body>
+</html>

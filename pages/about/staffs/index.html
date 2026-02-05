@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Tribhuwan Shanti Secondary School | Staff Directory</title>
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Meet the dedicated teaching and non-teaching staff of Shree Tribhuwan Shanti Model Secondary School. Our team of professionals is committed to providing quality education."
+    />
+    <meta name="keywords" content="stsss staff, school teachers, Pokhara educators, school administration team">
+    <meta name="author" content="Shree Tribhuwan Shanti Secondary School" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg_major: "#0A1535",
+              bg_minor: "#FFFFFF",
+              txt_major: "#0A1535",
+              txt_minor: "#FFFFFF",
+              accent: "#3B82F6",
+            },
+            fontFamily: {
+              sans: ["Outfit", "sans-serif"],
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <!-- Components -->
+    <script src="/js/components/SchoolHeader.js" type="module"></script>
+    <script src="/js/components/SchoolFooter.js" type="module"></script>
+  </head>
+
+  <body class="font-sans bg-gray-50 text-[#0A1535] overflow-x-hidden">
+    <school-header></school-header>
+
+    <main class="pt-20 pb-20">
+      <!-- Hero Section -->
+      <section class="bg-bg_major text-white py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 text-center relative z-10">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight" data-aos="fade-up">Our Faculty & Staff</h1>
+          <p class="text-blue-100/80 max-w-2xl mx-auto text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            A collaborative community of expert educators and dedicated professionals shaping the future of Nepal.
+          </p>
+        </div>
+        <!-- Decorative blobs -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-400/10 rounded-full blur-3xl -ml-24 -mb-24"></div>
+      </section>
+
+      <!-- Announcement Marquee -->
+      <div class="bg-blue-600 text-white py-2 mb-16 overflow-hidden whitespace-nowrap shadow-sm" data-aos="fade-down">
+          <div class="inline-block animate-marquee pl-[100%] text-sm font-medium uppercase tracking-wider">
+            If any teacher's image is missing or incorrect, please email your photo to: contact@safalchhetri.com.np || notexstudios@gmail.com. || Updates are processed weekly.
+          </div>
+      </div>
+
+      <style>
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+        .animate-marquee { animation: marquee 30s linear infinite; }
+        .staff-card-clip { clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%); }
+      </style>
+
+      <!-- Section: Leadership & Administration -->
+      <section class="container mx-auto px-6 md:px-12 mb-24">
+        <div class="text-center mb-16" data-aos="fade-up">
+           <span class="text-blue-600 font-bold tracking-widest uppercase text-xs">Governance</span>
+           <h2 class="text-3xl md:text-4xl font-bold mt-2">Executive Leadership</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+           <!-- SMC Chairperson -->
+           <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col items-center hover:translate-y-[-8px] transition duration-500 group" data-aos="zoom-in">
+              <div class="relative mb-6">
+                <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1770318151/WhatsApp_Image_2026-02-06_at_00.47.06_ubzrme.jpg" alt="Nabaraj Sapkota" class="w-40 h-40 rounded-full object-cover border-4 border-blue-50 shadow-inner group-hover:border-blue-200 transition duration-500">
+                <div class="absolute -bottom-2 right-4 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+                  <i class="fas fa-crown text-xs"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-center">Nagendra Regmi</h3>
+              <p class="text-blue-600 text-xs font-bold uppercase tracking-widest mt-2">SMC Chairperson</p>
+           </div>
+
+
+           <!-- Head Teacher -->
+           <div class="bg-white p-8 rounded-3xl shadow-xl border-2 border-blue-100 flex flex-col items-center hover:translate-y-[-8px] transition duration-500 group relative overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+              <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-[10px] font-bold uppercase rotate-45 translate-x-3 translate-y-3">Principal</div>
+              <div class="relative mb-6">
+                <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1719389242/e7sqcak3qkaogifydawk.jpg" alt="Somat Kumari" class="w-40 h-40 rounded-full object-cover border-4 border-blue-50 group-hover:border-blue-200 transition duration-500">
+              </div>
+              <h3 class="text-xl font-bold text-center">Somat Kumari Lamichhane</h3>
+              <p class="text-blue-600 text-xs font-bold uppercase tracking-widest mt-2">Headteacher (M.ED)</p>
+           </div>
+
+           <!-- Asst Headteacher 1 -->
+           <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col items-center hover:translate-y-[-8px] transition duration-500 group" data-aos="zoom-in" data-aos-delay="300">
+              <div class="relative mb-6">
+                <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1719389166/goihulxcabii9clywngf.jpg" alt="Ramchandra Bhandari" class="w-40 h-40 rounded-full object-cover border-4 border-blue-50 group-hover:border-blue-200 transition duration-500">
+              </div>
+              <h3 class="text-xl font-bold text-center">Dr. Ramchandra Bhandari</h3>
+              <p class="text-gray-500 text-xs font-bold uppercase tracking-widest mt-2">Assistant Headteacher</p>
+           </div>
+
+           <!-- Asst Headteacher 2 -->
+           <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 flex flex-col items-center hover:translate-y-[-8px] transition duration-500 group" data-aos="zoom-in" data-aos-delay="400">
+              <div class="relative mb-6">
+                <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1719389167/ays1fpxg3h14it6auqfd.jpg" alt="Kamal Raj Adhikari" class="w-40 h-40 rounded-full object-cover border-4 border-blue-50 group-hover:border-blue-200 transition duration-500">
+              </div>
+              <h3 class="text-xl font-bold text-center">Kamal Raj Adhikari</h3>
+              <p class="text-gray-500 text-xs font-bold uppercase tracking-widest mt-2">Assistant Headteacher</p>
+           </div>
+        </div>
+      </section>
+
+      <!-- Section: Teaching Departments (+2 Faculty) -->
+      <section class="container mx-auto px-6 md:px-12 mb-24">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+           <div data-aos="fade-right">
+              <span class="text-blue-600 font-bold tracking-widest uppercase text-xs">Academics</span>
+              <h2 class="text-3xl font-bold mt-2">+2 Faculty Members</h2>
+           </div>
+           <div class="h-1 flex-grow bg-blue-50 mx-8 hidden md:block"></div>
+           <div class="bg-blue-600 px-6 py-2 rounded-full text-white text-sm font-bold shadow-lg" data-aos="fade-left">
+              Advanced Streams
+           </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+           <!-- Coordinator -->
+           <div class="text-center group" data-aos="fade-up">
+              <div class="relative inline-block mb-4">
+                 <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1770317897/WhatsApp_Image_2026-02-06_at_00.41.44_1_u3xkgd.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-2xl object-cover border-b-4 border-blue-600 shadow-md group-hover:scale-105 transition duration-500">
+              </div>
+              <h4 class="font-bold text-slate-800">Laxman Thapa</h4>
+              <p class="text-blue-600 text-[11px] font-bold uppercase">+2 Coordinator</p>
+           </div>
+
+           <!-- Faculty Cards -->
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+              <img src="/img/staffs/02_nabaraj.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Nabaraj Subedi</h4>
+              <p class="text-gray-500 text-xs">Chemistry</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="150">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751093634/295005605_3236263156662933_3584912106706925374_n.jpg_ikhmsw.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Thaneswor Tiwari</h4>
+              <p class="text-gray-500 text-xs">Mathematics</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+              <img src="/img/staffs/09_hari.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Hari Krishna Neupane</h4>
+              <p class="text-gray-500 text-xs">English</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="250">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751093488/493713089_29311777535133357_5148880520354111701_n.jpg_wca8wo.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Sunil Subedi</h4>
+              <p class="text-gray-500 text-xs">Social Studies</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751093744/510002797_1230090618845390_1492993376415278793_n.jpg_yyicoq.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Binod Raj Poudel</h4>
+              <p class="text-gray-500 text-xs">Economics</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="350">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751094125/497681122_2405246523164784_8426794505928997886_n.jpg_gnlxzr.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Juna Dhakal</h4>
+              <p class="text-gray-500 text-xs">Nepali</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751093466/471301024_3068078150008248_4451964304077170582_n.jpg_wcxuiq.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Asha Acharya</h4>
+              <p class="text-gray-500 text-xs">Business Studies</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="450">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751094309/445821515_3720564168271266_6513056466903215790_n.jpg_fsdjkb.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Azit Ojha</h4>
+              <p class="text-gray-500 text-xs">Computer Science</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="500">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751094153/489903839_9133316900113328_1634193741531813418_n.jpg_nzzqe8.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Jhalak Poudel</h4>
+              <p class="text-gray-500 text-xs">Nepali</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="550">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751094532/59827202_2413853698848296_2046230365227450368_n.jpg_ccpg0d.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Manisha Sharma</h4>
+              <p class="text-gray-500 text-xs">Botany</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="600">
+              <img src="/img/staffs/06_madan.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Madan Jamarkatel</h4>
+              <p class="text-gray-500 text-xs">Zoology</p>
+           </div>
+           
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="650">
+              <img src="/img/staffs/08_lab1.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Dan Maya Sharma</h4>
+              <p class="text-gray-500 text-xs">Lab Assistant</p>
+           </div>
+
+           <div class="text-center group" data-aos="fade-up" data-aos-delay="700">
+              <img src="/img/staffs/10_lab2.jpg" class="w-32 h-32 md:w-36 md:h-36 rounded-full mx-auto object-cover border-2 shadow-sm group-hover:shadow-xl transition duration-300 mb-4">
+              <h4 class="font-bold">Samir Sharma</h4>
+              <p class="text-gray-500 text-xs">Lab Assistant</p>
+           </div>
+        </div>
+      </section>
+
+      <!-- Section: School Level Teachers -->
+      <section class="container mx-auto px-6 md:px-12 mb-24">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+           <div data-aos="fade-right">
+              <span class="text-blue-600 font-bold tracking-widest uppercase text-xs">Nursery to Class X</span>
+              <h2 class="text-3xl font-bold mt-2">School Level Faculty</h2>
+           </div>
+           <p class="text-gray-500 max-w-md text-sm italic">The foundational pillars of our academic excellence.</p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 md:gap-6 justify-center">
+           <!-- Dynamically mapped from original images -->
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117006/staff%20nd%20Teachers/zfkgse1l7uqgecetwvsy.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117004/staff%20nd%20Teachers/islylzfn1vw5oeeeeojj.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="50">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117035/staff%20nd%20Teachers/hvn8igtwbpprbimrvla8.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117002/staff%20nd%20Teachers/qrqsqgd2cysbqlkjrd6h.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="150">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117042/staff%20nd%20Teachers/javmzhm4a8fjlnk3wyvh.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720116992/staff%20nd%20Teachers/ayvlp7dvb0qlme6pjd2p.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="250">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720116988/staff%20nd%20Teachers/a5gzcqyxboecpgheuqjz.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720116996/staff%20nd%20Teachers/n2opcipjngjn2mfhuymj.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="350">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117000/staff%20nd%20Teachers/snnvrbyuqjr35qcpkwcr.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="400">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117038/staff%20nd%20Teachers/a9vzj7r1bpw4hhpvty7m.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="450">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117039/staff%20nd%20Teachers/davlmhigiwlr6vkndsv6.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="500">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720116990/staff%20nd%20Teachers/nzf6beghac4paiosouxl.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="550">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720116982/staff%20nd%20Teachers/av8wumlvywtcvtmawqhm.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="600">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117068/staff%20nd%20Teachers/llbyuslnxxa1borpvdis.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="650">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117010/staff%20nd%20Teachers/xa9zibapk5quiatmj6pr.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="700">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117014/staff%20nd%20Teachers/bhunupqpot6nsbrjjnad.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="750">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720116994/staff%20nd%20Teachers/pwkvkjbusuniquxpacle.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="800">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117071/staff%20nd%20Teachers/l8xzgiieer5ltiq6eoin.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="850">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117046/staff%20nd%20Teachers/w1r0vsjlin1nhvehnkru.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="900">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117032/staff%20nd%20Teachers/ajwitknenzqro0vvvlkh.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="950">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117027/staff%20nd%20Teachers/o9kxwejw2jmfsxdp1sep.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="1000">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117032/staff%20nd%20Teachers/rktsercidhvaekgulzsg.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="1050">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117028/staff%20nd%20Teachers/x30rw7vi4i7psbemmaju.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="1100">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117018/staff%20nd%20Teachers/k1z3ppvgpgjrltnge7uy.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="1150">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117022/staff%20nd%20Teachers/tyfpj03d5wyjkfblzqbs.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="1200">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117025/staff%20nd%20Teachers/zmvz0mole0qmcuowbsz2.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="1250">
+           <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720116976/staff%20nd%20Teachers/ywq6o2vsenv2mpxeuhmg.jpg" class="w-24 h-24 md:w-32 md:h-32 rounded-xl object-cover grayscale hover:grayscale-0 transition duration-500 shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="1300">
+        </div>
+      </section>
+
+      <!-- Section: Left Teachers (Previous Faculty) -->
+      <section class="container mx-auto px-6 md:px-12 mb-24 bg-gray-100/50 py-16 rounded-[3rem]">
+        <div class="text-center mb-12" data-aos="fade-up">
+           <span class="text-gray-500 font-bold tracking-widest uppercase text-xs">Gratitude</span>
+           <h2 class="text-3xl font-bold mt-2">Previous Faculty Members</h2>
+           <p class="text-gray-500 mt-2">Acknowledging the educators who have contributed to our legacy.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+           <div class="bg-white p-6 rounded-2xl flex items-center gap-6 shadow-sm hover:shadow-md transition" data-aos="fade-up">
+              <img src="/img/staffs/03_navaraj.jpg" class="w-20 h-20 rounded-full object-cover border">
+              <div><h4 class="font-bold">Nabaraj Adhikari</h4><p class="text-gray-500 text-xs">Computer Science</p></div>
+           </div>
+           <div class="bg-white p-6 rounded-2xl flex items-center gap-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+              <img src="/img/staffs/05_prodeep.jpg" class="w-20 h-20 rounded-full object-cover border">
+              <div><h4 class="font-bold">Proodep Poudel</h4><p class="text-gray-500 text-xs">Botany</p></div>
+           </div>
+           <div class="bg-white p-6 rounded-2xl flex items-center gap-6 shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751095069/476229706_122103003566753922_8371262235555565727_n.jpg_saooel.jpg" class="w-20 h-20 rounded-full object-cover border">
+              <div><h4 class="font-bold">Susan Subedi</h4><p class="text-gray-500 text-xs">Computer Science</p></div>
+           </div>
+        </div>
+      </section>
+
+      <!-- Section: Non-Teaching Staff -->
+      <section class="container mx-auto px-6 md:px-12 mb-24">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+           <div data-aos="fade-right">
+              <span class="text-blue-600 font-bold tracking-widest uppercase text-xs">Administration Support</span>
+              <h2 class="text-3xl font-bold mt-2">Support Staff</h2>
+           </div>
+           <div class="h-1 flex-grow bg-blue-50 mx-8 hidden md:block"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+           <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-6 group hover:border-blue-200 transition" data-aos="fade-up">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720116984/staff%20nd%20Teachers/krzfxkhxskstla5gbq9u.jpg" class="w-20 h-20 rounded-xl object-cover group-hover:scale-105 transition">
+              <div><h4 class="text-lg font-bold">Anil Pageni</h4><p class="text-gray-500 text-xs">Accountant</p></div>
+           </div>
+           <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 flex items-center gap-6 group hover:border-blue-200 transition" data-aos="fade-up" data-aos-delay="100">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117022/staff%20nd%20Teachers/hlqdpot2glbfec8abq7j.jpg" class="w-20 h-20 rounded-xl object-cover group-hover:scale-105 transition">
+              <div><h4 class="text-lg font-bold">Hari Gorkhali</h4><p class="text-gray-500 text-xs">Accountant</p></div>
+           </div>
+           <!-- Restoring anonymous support staff images from original -->
+           <div class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720117071/staff%20nd%20Teachers/ueldm1cwpwsqyiojbegi.jpg" class="w-20 h-20 rounded-xl object-cover opacity-80 hover:opacity-100 transition">
+           </div>
+           <div class="bg-white p-6 rounded-2xl shadow-lg flex items-center justify-center border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1720116986/staff%20nd%20Teachers/rco1vo4je5w8ogvkym90.jpg" class="w-20 h-20 rounded-xl object-cover opacity-80 hover:opacity-100 transition">
+           </div>
+        </div>
+      </section>
+    </main>
+
+    <school-footer></school-footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+  </body>
+</html>

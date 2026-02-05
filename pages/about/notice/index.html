@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Tribhuwan Shanti Secondary School | Notice Panel</title>
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Stay updated with the latest official notices, event announcements, and academic updates from Shree Tribhuwan Shanti Model Secondary School."
+    />
+    <meta name="keywords" content="stsss notices, school updates, Pokhara school events, academic calendar, Shree Tribhuwan Shanti notices">
+    <meta name="author" content="Shree Tribhuwan Shanti Secondary School" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg_major: "#0A1535",
+              bg_minor: "#FFFFFF",
+              txt_major: "#0A1535",
+              txt_minor: "#FFFFFF",
+            },
+            fontFamily: {
+              sans: ["Outfit", "sans-serif"],
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <!-- Components -->
+    <script src="/js/components/SchoolHeader.js" type="module"></script>
+    <script src="/js/components/SchoolFooter.js" type="module"></script>
+  </head>
+
+  <body class="font-sans bg-gray-50 text-[#0A1535] overflow-x-hidden">
+    <school-header></school-header>
+
+    <main class="pt-20 pb-20">
+      <section class="bg-[#0A1535] text-white py-16 mb-12">
+        <div class="container mx-auto px-6 md:px-12 text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">Notice Panel</h1>
+          <p class="text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            Official announcements, examination schedules, and latest updates from the school administration.
+          </p>
+        </div>
+      </section>
+
+      <section class="container mx-auto px-6 md:px-12">
+        <!-- Dynamic Content Container -->
+        <div id="mainContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up">
+          <!-- Dynamically loaded notices will appear here -->
+          <div class="col-span-full py-20 text-center text-gray-400">
+             <i class="fa-solid fa-spinner fa-spin text-4xl mb-4"></i>
+             <p>Loading latest notices...</p>
+          </div>
+        </div>
+        
+        <p id="error" class="text-center mt-12 text-gray-500 font-medium">
+          Note: If notices do not load, please refresh the page.
+        </p>
+      </section>
+    </main>
+
+    <school-footer></school-footer>
+
+    <!-- Scripts -->
+    <script src="/js/notice.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+  </body>
+</html>

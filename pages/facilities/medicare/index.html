@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Tribhuwan Shanti Secondary School | Medical Facilities</title>
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Comprehensive medical and first-aid facilities at Shree Tribhuwan Shanti Model Secondary School. Ensuring student health and well-being on campus."
+    />
+    <meta name="keywords" content="stsss medicare, school infirmary Pokhara, student health, first aid station">
+    <meta name="author" content="Shree Tribhuwan Shanti Secondary School" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg_major: "#0A1535",
+              bg_minor: "#FFFFFF",
+              txt_major: "#0A1535",
+              txt_minor: "#FFFFFF"
+            }
+          }
+        }
+      };
+    </script>
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <!-- Components -->
+    <script src="/js/components/SchoolHeader.js" type="module"></script>
+    <script src="/js/components/SchoolFooter.js" type="module"></script>
+  </head>
+
+  <body class="font-sans bg-gray-50 text-[#0A1535] overflow-x-hidden">
+    <school-header></school-header>
+
+    <main class="pt-20 pb-20">
+      <!-- Hero -->
+      <section class="bg-white border-b border-gray-100 py-16">
+         <div class="container mx-auto px-6 md:px-12">
+            <div class="max-w-3xl" data-aos="fade-up">
+               <span class="bg-red-50 text-red-600 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">Student Welfare</span>
+               <h1 class="text-4xl md:text-6xl font-bold mt-4 mb-6 text-slate-900 leading-tight">Medicare & <br><span class="text-blue-600">First-Aid Center</span></h1>
+               <p class="text-xl text-gray-500 leading-relaxed">Prioritizing the physical health and immediate care of every member of our school community.</p>
+            </div>
+         </div>
+      </section>
+
+      <!-- Main Content -->
+      <section class="py-20 container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+           <div data-aos="fade-right">
+              <h2 class="text-3xl font-bold mb-6">A Sanctuary of Care</h2>
+              <div class="text-lg text-gray-600 leading-relaxed space-y-6 text-justify">
+                 <p>Located on the ground floor of the administrative block, our medicare facility is dedicated to nurturing the health and well-being of its students and staff. This oasis of care is fully equipped to handle first-aid treatment and minor infirmities.</p>
+                 <p>The room maintains a sense of calm, with neatly organized shelves filled with essential supplies like bandages, antiseptic solutions, and a comprehensive emergency medical kit. Every detail is designed to provide immediate comfort to those in need.</p>
+              </div>
+           </div>
+           <div class="grid grid-cols-1 gap-6" data-aos="fade-left">
+              <div class="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100 italic font-medium text-gray-700 relative">
+                 "Our primary goal is to ensure a safe environment where health never becomes a barrier to learning."
+                 <div class="absolute -top-4 -left-4 w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-heart"></i>
+                 </div>
+              </div>
+              <!-- Since 1.jpg/2.jpg might not exist, I'll use a clean placeholder or skip if not found -->
+              <div class="h-64 bg-slate-200 rounded-[2rem] overflow-hidden flex items-center justify-center text-slate-400">
+                 <i class="fas fa-notes-medical text-6xl"></i>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-[#0A1535] text-white">
+         <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center uppercase tracking-tight">
+            <div class="order-2 lg:order-1" data-aos="fade-up">
+               <h2 class="text-3xl font-bold mb-6 italic text-blue-400">Trained Personnel</h2>
+               <div class="text-lg text-gray-300 leading-relaxed space-y-6">
+                  <p>The facility is run by compassionate staff members trained in basic healthcare protocols. They stand ready to administer first aid for playground scrapes or minor health issues.</p>
+                  <p>Beyond immediate care, the facility serves as a gateway to the broader healthcare system, offering guidance for students needing professional medical attention. We foster a culture of safety where every student feels secure and cared for.</p>
+               </div>
+            </div>
+            <div class="order-1 lg:order-2 flex justify-center" data-aos="zoom-in">
+               <div class="w-72 h-72 border-4 border-red-500 rounded-full flex items-center justify-center animate-pulse">
+                  <i class="fas fa-plus text-[10rem] text-red-500"></i>
+               </div>
+            </div>
+         </div>
+      </section>
+    </main>
+
+    <school-footer></school-footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+  </body>
+</html>

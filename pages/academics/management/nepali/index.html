@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Tribhuwan Shanti Secondary School | +2 Management (Nepali Medium)</title>
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Join the Nepali Medium Management program at Shree Tribhuwan Shanti Model Secondary School. Strong focus on business basics and local economic context."
+    />
+    <meta name="keywords" content="stsss management nepali, +2 management Pokhara, Nepali medium management, business studies">
+    <meta name="author" content="Shree Tribhuwan Shanti Secondary School" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg_major: "#0A1535",
+              bg_minor: "#FFFFFF",
+              txt_major: "#0A1535",
+              txt_minor: "#FFFFFF"
+            }
+          }
+        }
+      };
+    </script>
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <!-- Components -->
+    <script src="/js/components/SchoolHeader.js" type="module"></script>
+    <script src="/js/components/SchoolFooter.js" type="module"></script>
+  </head>
+
+  <body class="font-sans bg-gray-50 text-[#0A1535] overflow-x-hidden">
+    <school-header></school-header>
+
+    <main class="pt-20 pb-20">
+      <section class="relative h-[40vh] bg-[#0A1535] flex items-center">
+        <div class="container mx-auto px-6 md:px-12 relative z-10 text-white border-l-4 border-blue-600 pl-8">
+          <div data-aos="fade-up">
+             <h1 class="text-4xl md:text-5xl font-bold mb-2">+2 Management</h1>
+             <p class="text-xl md:text-2xl text-blue-300">( Nepali Medium )</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 container mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+           <div class="bg-white p-10 rounded-3xl shadow-lg" data-aos="fade-right">
+              <h2 class="text-2xl font-bold mb-6 text-blue-600">Objectives of the Program</h2>
+              <div class="space-y-4 text-gray-700 leading-relaxed text-lg">
+                <p>The Nepali Medium Management stream offers students a comprehensive understanding of business operations while catering to their linguistic comfort. We focus on accounting principles, business studies, and economics.</p>
+                <p>Our goal is to prepare students for undergraduate studies in business and to give them the tools to succeed in the local job market or entrepreneurial ventures.</p>
+              </div>
+           </div>
+
+           <div class="space-y-6" data-aos="fade-left">
+              <div class="bg-[#0A1535] text-white p-8 rounded-3xl">
+                 <h3 class="text-xl font-bold mb-4">Why choose Nepali Medium?</h3>
+                 <ul class="space-y-3">
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-blue-400 mt-1"></i> Better conceptual clarity in native language</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-blue-400 mt-1"></i> Focus on local business context</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-blue-400 mt-1"></i> Supportive learning environment</li>
+                 </ul>
+              </div>
+              <a href="/pages/admission/" class="block w-full text-center bg-blue-600 text-white py-4 rounded-3xl font-bold hover:bg-blue-700 transition">Get Started Today</a>
+           </div>
+        </div>
+      </section>
+    </main>
+
+    <school-footer></school-footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+  </body>
+</html>

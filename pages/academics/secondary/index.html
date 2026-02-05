@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shree Tribhuwan Shanti Secondary School | Secondary Level</title>
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Comprehensive secondary education (Grade IX & X) at Shree Tribhuwan Shanti Model Secondary School. Strong academic foundation and personality development."
+    />
+    <meta name="keywords" content="stsss secondary, Grade IX Pokhara, Grade X Pokhara, secondary school Kaski">
+    <meta name="author" content="Shree Tribhuwan Shanti Secondary School" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg_major: "#0A1535",
+              bg_minor: "#FFFFFF",
+              txt_major: "#0A1535",
+              txt_minor: "#FFFFFF"
+            }
+          }
+        }
+      };
+    </script>
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <!-- Components -->
+    <script src="/js/components/SchoolHeader.js" type="module"></script>
+    <script src="/js/components/SchoolFooter.js" type="module"></script>
+  </head>
+
+  <body class="font-sans bg-gray-50 text-[#0A1535] overflow-x-hidden">
+    <school-header></school-header>
+
+    <main class="pt-20 pb-20">
+      <section class="bg-white py-20 border-b border-gray-100">
+        <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+           <div data-aos="fade-right">
+              <h1 class="text-4xl md:text-6xl font-black text-[#0A1535] mb-6">Secondary Level</h1>
+              <span class="text-blue-600 font-bold uppercase tracking-[0.2em] text-sm block mb-8">Grade IX & X (SEE Prep)</span>
+              <p class="text-lg text-gray-500 leading-relaxed mb-8">Developing the core academic and social foundations necessary for higher secondary success. We focus on critical thinking, problem solving, and analytical skills.</p>
+              <div class="flex flex-wrap gap-4">
+                 <div class="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-lg text-blue-700 font-medium">
+                    <i class="fa-solid fa-flask"></i> Science Labs
+                 </div>
+                 <div class="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-lg text-blue-700 font-medium">
+                    <i class="fa-solid fa-computer"></i> IT Classes
+                 </div>
+                 <div class="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-lg text-blue-700 font-medium">
+                    <i class="fa-solid fa-book"></i> SEE Excellence
+                 </div>
+              </div>
+           </div>
+           
+           <div class="relative" data-aos="zoom-in">
+              <div class="absolute inset-0 bg-blue-600 rounded-[3rem] rotate-3 scale-105 opacity-10"></div>
+              <img src="https://res.cloudinary.com/dzioycr1r/image/upload/v1719305204/kqoayjgq8bvmnljvizbt.jpg" class="rounded-[3rem] shadow-2xl relative z-10 w-full object-cover aspect-video">
+           </div>
+        </div>
+      </section>
+
+      <section class="py-20 container mx-auto px-6 md:px-12">
+        <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">A Balanced Approach</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+           <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100" data-aos="fade-up">
+              <h4 class="text-xl font-bold mb-4">Academic Rigor</h4>
+              <p class="text-gray-500">Focused preparation for the Secondary Education Examination (SEE) with extra support for key subjects.</p>
+           </div>
+           <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="text-xl font-bold mb-4">Skill Development</h4>
+              <p class="text-gray-500">Integrating digital literacy and public speaking into the core curriculum to build self-confidence.</p>
+           </div>
+           <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+              <h4 class="text-xl font-bold mb-4">Holistic Growth</h4>
+              <p class="text-gray-500">Encouraging participation in sports, music, and social clubs to nurture teamwork and empathy.</p>
+           </div>
+        </div>
+      </section>
+    </main>
+
+    <school-footer></school-footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+  </body>
+</html>
