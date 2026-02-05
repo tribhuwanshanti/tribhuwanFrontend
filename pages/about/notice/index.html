@@ -81,6 +81,41 @@
 
     <school-footer></school-footer>
 
+    <!-- Notice Modal -->
+    <div id="noticeModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-all duration-300 opacity-0">
+        <div class="bg-white rounded-[2.5rem] shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden transform scale-95 transition-all duration-300 flex flex-col">
+            <div class="p-8 md:p-10 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-8">
+                    <div class="pr-8">
+                        <span id="modalDate" class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-3 block"></span>
+                        <h2 id="modalTitle" class="text-2xl md:text-3xl font-black text-[#0A1535] leading-tight"></h2>
+                    </div>
+                    <button onclick="closeNotice()" class="p-3 hover:bg-gray-100 rounded-2xl transition-all text-gray-400 hover:text-gray-900 group">
+                        <i class="fa-solid fa-xmark text-xl group-hover:rotate-90 transition-transform duration-300"></i>
+                    </button>
+                </div>
+                
+                <div class="overflow-y-auto pr-4 flex-grow scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-transparent">
+                    <div id="modalContent" class="text-gray-600 leading-[1.8] text-lg"></div>
+                </div>
+                
+                <div class="mt-8 pt-8 border-t border-gray-100 flex justify-end">
+                    <button onclick="closeNotice()" class="bg-[#0A1535] text-white px-10 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all shadow-xl shadow-blue-900/10 active:scale-95">
+                        Close Notice
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Custom Scrollbar for Modal */
+        .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+        .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+        .scrollbar-thin::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 10px; }
+        .scrollbar-thin::-webkit-scrollbar-thumb:hover { background: #D1D5DB; }
+    </style>
+
     <!-- Scripts -->
     <script src="/js/notice.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
