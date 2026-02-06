@@ -26,7 +26,7 @@ class SchoolFooter extends HTMLElement {
                         <h2 class="title-font font-bold text-[#0A1535] tracking-widest text-xs uppercase mt-4 mb-2 flex items-center">
                            <i class="fa-solid fa-phone mr-2 text-green-600"></i> Phone
                         </h2>
-                        <p class="text-sm text-gray-700 font-medium">061-504136</p>
+                        <p class="text-sm text-gray-700 font-medium">+977 9856021704</p>
                      </div>
                   </div>
                </div>
@@ -117,7 +117,7 @@ class SchoolFooter extends HTMLElement {
                   </li>
                    <li class="flex items-center">
                     <i class="fa-solid fa-phone mr-3 text-white"></i>
-                    <span>061-504136</span>
+                    <span>+977 9856021704</span>
                   </li>
                   <li class="flex items-center">
                     <i class="fa-solid fa-envelope mr-3 text-white"></i>
