@@ -60,8 +60,22 @@
          </div>
       </section>
 
-      <!-- Gallery Grid -->
+      <!-- Dynamic Gallery -->
+      <section class="py-8 container mx-auto px-4 md:px-6" id="dynamic-gallery">
+        <!-- Folders Grid -->
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">Albums</h2>
+        <div id="gallery-folders" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+           <!-- Folders injected via JS -->
+           <div class="animate-pulse flex space-x-4">
+              <div class="rounded-xl bg-gray-200 h-48 w-full"></div>
+           </div>
+        </div>
+
+      </section>
+
+      <!-- Static Gallery Grid -->
       <section class="py-12 container mx-auto px-4 md:px-6">
+         <h2 class="text-2xl font-bold mb-6 text-gray-800">All Photos</h2>
          <div class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
             <!-- Full collection of images -->
             <img class="w-full rounded-2xl shadow-sm hover:shadow-xl hover:scale-[1.02] transition duration-300 border border-gray-100" data-aos="fade-up" src="https://res.cloudinary.com/dzioycr1r/image/upload/v1751101362/487876281_1397333264938953_644241923932771540_n.jpg_gckkao.jpg">
@@ -147,6 +161,52 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 800, once: true });
+
+      // Dynamic Gallery Logic
+      const API_BASE = 'https://app.stsss.edu.np'; // Backend URL
+      const foldersContainer = document.getElementById('gallery-folders');
+      const folderView = document.getElementById('folder-view');
+      const folderTitle = document.getElementById('folder-title');
+      const folderImages = document.getElementById('folder-images');
+
+      async function loadFolders() {
+          try {
+              const res = await fetch(`${API_BASE}/api/gallery/folders`);
+              if(!res.ok) throw new Error("Failed to load");
+              const folders = await res.json();
+              
+              foldersContainer.innerHTML = '';
+              if(folders.length === 0) {
+                  foldersContainer.innerHTML = '<p class="text-gray-500 col-span-full text-center">No albums found.</p>';
+                  return;
+              }
+
+              folders.forEach(folder => {
+                  const div = document.createElement('a'); // Changed div to a for semantic linking
+                  div.href = `/pages/gallery/album.html?id=${folder.id}`;
+                  div.className = "block bg-white rounded-xl shadow-sm hover:shadow-md transition cursor-pointer overflow-hidden border border-gray-100 group";
+                  
+                  const img = folder.cover_image ? `<img src="${folder.cover_image}" class="h-64 w-full object-cover group-hover:scale-105 transition duration-500">` : `<div class="h-64 bg-gray-50 flex items-center justify-center text-gray-400"><i class="fas fa-images text-3xl"></i></div>`;
+                  
+                  div.innerHTML = `
+                      <div class="relative h-full">
+                          ${img}
+                          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-5 pt-12">
+                               <h3 class="text-white font-bold text-xl drop-shadow-sm">${folder.name}</h3>
+                               <p class="text-white/90 text-sm mt-1 font-medium bg-black/20 inline-block px-2 py-0.5 rounded-full backdrop-blur-sm">${folder.image_count} Photos</p>
+                          </div>
+                      </div>
+                  `;
+                  div.setAttribute('data-aos', 'fade-up');
+                  foldersContainer.appendChild(div);
+              });
+          } catch(e) {
+              console.error(e);
+              foldersContainer.innerHTML = '<p class="text-red-500 col-span-full">Failed to load albums. Please check connection.</p>';
+          }
+      }
+
+      loadFolders();
     </script>
   </body>
 </html>

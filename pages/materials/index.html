@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials | Shree Tribhuwan Shanti Secondary School</title>
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+    
+    <!-- Fonts/Icons/Tailwind as usual -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { bg_major: "#0A1535", bg_minor: "#FFFFFF", txt_major: "#0A1535", txt_minor: "#FFFFFF" }
+          }
+        }
+      };
+    </script>
+    <script src="/js/components/SchoolHeader.js" type="module"></script>
+    <script src="/js/components/SchoolFooter.js" type="module"></script>
+</head>
+
+<body class="font-sans bg-gray-50 text-[#0A1535] overflow-x-hidden min-h-screen flex flex-col">
+    <school-header></school-header>
+
+    <main class="pt-32 pb-20 flex-grow container mx-auto px-4 md:px-6">
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Study Materials</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">Access notes, assignments, and resources shared by your teachers.</p>
+        </div>
+
+        <!-- Filter/Search (Future placeholder) -->
+        
+        <div id="materials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Loading Skeleton -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 animate-pulse h-64"></div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 animate-pulse h-64"></div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 animate-pulse h-64"></div>
+        </div>
+
+        <div id="empty-state" class="hidden text-center py-20 bg-white rounded-2xl border border-dashed border-gray-300">
+            <i class="fas fa-folder-open text-4xl text-gray-300 mb-4"></i>
+            <p class="text-gray-500 text-lg">No study materials found for your batch/faculty.</p>
+        </div>
+    </main>
+
+    <school-footer></school-footer>
+
+    <script>
+        const API_BASE = 'http://localhost:3000'; // Adjust if needed
+
+        async function loadMaterials() {
+            const container = document.getElementById('materials-grid');
+            const emptyState = document.getElementById('empty-state');
+
+            try {
+                // Determine if we are viewing as a student (credentials passed automatically via cookie/session usually, 
+                // but since frontend is decoupled, we might need a token or rely on session cookie if on same domain)
+                // Assuming session cookie works for same-origin or localhost
+                
+                const res = await fetch(`${API_BASE}/api/materials`, {
+                   // include credentials if cross-origin
+                });
+                
+                if(!res.ok) throw new Error("Failed to fetch");
+
+                const materials = await res.json();
+                
+                container.innerHTML = '';
+                
+                if(materials.length === 0) {
+                    emptyState.classList.remove('hidden');
+                    container.style.display = 'none';
+                    return;
+                }
+
+                materials.forEach(m => {
+                    const date = new Date(m.created_at).toLocaleDateString('en-US', { 
+                        year: 'numeric', month: 'short', day: 'numeric' 
+                    });
+
+                    const card = document.createElement('div');
+                    card.className = "bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col";
+                    
+                    let downloadBtn = '';
+                    if(m.pdf_url) {
+                        if(m.allow_download === 1) {
+                            downloadBtn = `
+                                <a href="${m.pdf_url}" target="_blank" class="mt-auto flex items-center justify-center w-full py-3 bg-indigo-50 text-indigo-700 font-semibold rounded-xl hover:bg-indigo-100 transition-colors group">
+                                    <i class="fas fa-file-pdf mr-2 group-hover:scale-110 transition-transform"></i> Download PDF
+                                </a>
+                            `;
+                        } else {
+                            // "View Only" means Read Online in our secure viewer
+                            downloadBtn = `
+                                <a href="/pages/materials/viewer.html?src=${encodeURIComponent(m.pdf_url)}" target="_blank" class="mt-auto flex items-center justify-center w-full py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-colors cursor-pointer">
+                                    <i class="fas fa-book-reader mr-2"></i> Read Online
+                                </a>
+                            `;
+                        }
+                    }
+
+                    card.innerHTML = `
+                        <div class="mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-gray-400 bg-gray-50 px-2 py-1 rounded-md">${date}</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 line-clamp-2" title="${m.title}">${m.title}</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3 flex-grow">${m.description || 'No description provided.'}</p>
+                        ${downloadBtn}
+                        <div class="mt-4 pt-4 border-t border-gray-50 flex items-center text-xs text-gray-400">
+                            <i class="fas fa-user-circle mr-2 text-base"></i> Posted by ${m.author_name || 'Admin'}
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+
+            } catch(e) {
+                console.error(e);
+                container.innerHTML = `<p class="col-span-full text-center text-red-500">Unable to load materials. Please log in.</p>`;
+            }
+        }
+
+        loadMaterials();
+    </script>
+</body>
+</html>

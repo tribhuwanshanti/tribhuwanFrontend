@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album View | Shree Tribhuwan Shanti Secondary School</title>
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg_major: "#0A1535",
+              bg_minor: "#FFFFFF",
+              txt_major: "#0A1535",
+              txt_minor: "#FFFFFF"
+            }
+          }
+        }
+      };
+    </script>
+    
+    <!-- Components -->
+    <script src="/js/components/SchoolHeader.js" type="module"></script>
+    <script src="/js/components/SchoolFooter.js" type="module"></script>
+</head>
+
+<body class="font-sans bg-gray-50 text-[#0A1535] overflow-x-hidden min-h-screen flex flex-col">
+    <school-header></school-header>
+
+    <main class="pt-32 pb-20 flex-grow container mx-auto px-4 md:px-6">
+        <!-- Breadcrumb & Header -->
+        <div class="mb-8">
+            <a href="/pages/gallery/index.html" class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-indigo-600 mb-4 transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Gallery
+            </a>
+            <h1 id="album-title" class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">Loading Album...</h1>
+            <p id="album-meta" class="text-lg text-gray-500 mt-2"></p>
+        </div>
+
+        <!-- Images Grid -->
+        <div id="album-images" class="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+            <!-- Loading Skeleton -->
+            <div class="w-full h-64 bg-gray-200 rounded-xl animate-pulse"></div>
+            <div class="w-full h-80 bg-gray-200 rounded-xl animate-pulse"></div>
+            <div class="w-full h-56 bg-gray-200 rounded-xl animate-pulse"></div>
+        </div>
+        
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-20">
+             <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-4">
+                <i class="fas fa-image text-2xl text-gray-400"></i>
+             </div>
+             <p class="text-gray-500">No photos found in this album.</p>
+        </div>
+    </main>
+
+    <school-footer></school-footer>
+
+    <script>
+        const API_BASE = 'https://app.stsss.edu.np'; // Backend URL
+        
+        // Get Album ID
+        const urlParams = new URLSearchParams(window.location.search);
+        const albumId = urlParams.get('id');
+
+        if (!albumId) {
+            window.location.href = '/pages/gallery/index.html';
+        }
+
+        async function loadAlbum() {
+            const titleEl = document.getElementById('album-title');
+            const metaEl = document.getElementById('album-meta');
+            const gridEl = document.getElementById('album-images');
+            const emptyEl = document.getElementById('empty-state');
+
+            try {
+                const res = await fetch(`${API_BASE}/api/gallery/folders/${albumId}`);
+                if (!res.ok) throw new Error("Album not found");
+                
+                const { folder, images } = await res.json();
+                
+                // Update Header
+                titleEl.textContent = folder.name;
+                metaEl.textContent = `${images.length} Photos`;
+                document.title = `${folder.name} | Gallery`;
+
+                // Render Images
+                gridEl.innerHTML = '';
+                
+                if(images.length === 0) {
+                    emptyEl.classList.remove('hidden');
+                } else {
+                    images.forEach(img => {
+                         const imgEl = document.createElement('img');
+                         imgEl.src = img.url;
+                         imgEl.className = "w-full rounded-2xl shadow-sm hover:shadow-xl hover:scale-[1.02] transition duration-300 border border-gray-100 cursor-zoom-in";
+                         imgEl.loading = "lazy";
+                         imgEl.onclick = () => window.open(img.url, '_blank');
+                         gridEl.appendChild(imgEl);
+                    });
+                }
+            } catch (e) {
+                console.error(e);
+                titleEl.textContent = "Error Loading Album";
+                gridEl.innerHTML = `<p class="text-red-500">Failed to load content. Please try again later.</p>`;
+            }
+        }
+
+        loadAlbum();
+    </script>
+</body>
+</html>
