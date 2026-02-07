@@ -123,6 +123,7 @@ class SchoolHeader extends HTMLElement {
               </div>
 
               <a href="/pages/gallery/" class="text-[#0A1535] hover:font-bold hover:border-b-2 hover:border-[#0A1535] transition-all py-1">Gallery</a>
+              <a href="https://app.stsss.edu.np/pages/results/" class="text-[#0A1535] hover:font-bold hover:border-b-2 hover:border-[#0A1535] transition-all py-1">Results</a>
               <a href="#contact" class="text-[#0A1535] hover:font-bold hover:border-b-2 hover:border-[#0A1535] transition-all py-1">Contact</a>
             </nav>
 
@@ -194,6 +195,7 @@ class SchoolHeader extends HTMLElement {
               <div class="space-y-4 pt-4">
                 <a href="/pages/admission/" class="block text-xl font-medium text-white">Admission</a>
                 <a href="/pages/gallery/" class="block text-xl font-medium text-white">Gallery</a>
+                <a href="https://app.stsss.edu.np/pages/results/" class="block text-xl font-medium text-white">Results</a>
                 <a href="#contact" class="block text-xl font-medium text-white">Contact</a>
               </div>
               
