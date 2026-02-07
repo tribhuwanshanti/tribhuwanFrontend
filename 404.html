@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Page Not Found - Shree Tribhuwan Shanti Model Secondary School" />
+    <title>404 - Page Not Found | Shree Tribhuwan Shanti Secondary School</title>
+    
+    <link rel="shortcut icon" href="/icons/nav/fav.png" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        bg_major: '#0A1535',
+                        bg_minor: '#FFFFFF',
+                        txt_major: '#0A1535',
+                        txt_minor: '#FFFFFF',
+                        txt_special: '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        .pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+    </style>
+  </head>
+
+  <body class="font-sans antialiased overflow-x-hidden bg-gradient-to-br from-gray-50 to-blue-50">
+    
+    <!-- Main 404 Section -->
+    <main class="min-h-screen flex items-center justify-center px-6 py-12 relative overflow-hidden">
+        
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-20 left-10 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-40 pulse-slow"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-red-100 rounded-full blur-3xl opacity-40 pulse-slow" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/3 w-24 h-24 bg-yellow-100 rounded-full blur-3xl opacity-30 pulse-slow" style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <div class="text-center">
+                
+                <!-- 404 Illustration -->
+                <div class="mb-12 float-animation">
+                    <div class="inline-block relative">
+                        <!-- Large 404 Number -->
+                        <h1 class="text-[12rem] md:text-[16rem] font-black text-[#0A1535] leading-none opacity-10 select-none">404</h1>
+                        
+                        <!-- Icon Overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="bg-white p-8 md:p-12 rounded-full shadow-2xl">
+                                <i class="fa-solid fa-school text-6xl md:text-8xl text-[#0A1535]"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error Message -->
+                <div class="mb-8">
+                    <h2 class="text-3xl md:text-5xl font-bold text-[#0A1535] mb-4 font-heading">
+                        Oops! Page Not Found
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        The page you're looking for seems to have wandered off campus. Don't worry, we'll help you find your way back!
+                    </p>
+                </div>
+
+                <!-- Quick Links Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 max-w-3xl mx-auto">
+                    <a href="/" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                        <i class="fa-solid fa-house text-3xl text-blue-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-[#0A1535] mb-1">Home</h3>
+                        <p class="text-sm text-gray-500">Return to homepage</p>
+                    </a>
+                    
+                    <a href="/pages/about/overview/" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                        <i class="fa-solid fa-circle-info text-3xl text-green-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-[#0A1535] mb-1">About Us</h3>
+                        <p class="text-sm text-gray-500">Learn about our school</p>
+                    </a>
+                    
+                    <a href="/pages/admission/" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+                        <i class="fa-solid fa-graduation-cap text-3xl text-red-600 mb-3 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-bold text-[#0A1535] mb-1">Admissions</h3>
+                        <p class="text-sm text-gray-500">Enroll your child</p>
+                    </a>
+                </div>
+
+                <!-- Primary Action Button -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="/" class="inline-flex items-center bg-[#0A1535] text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-blue-900 hover:scale-105 transform transition-all duration-300 group">
+                        <i class="fa-solid fa-arrow-left mr-3 group-hover:-translate-x-1 transition-transform"></i>
+                        Back to Home
+                    </a>
+                    
+                    <a href="/pages/about/notice/" class="inline-flex items-center bg-white text-[#0A1535] border-2 border-[#0A1535] px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-[#0A1535] hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-bell mr-3"></i>
+                        View Notices
+                    </a>
+                </div>
+
+                <!-- Additional Help Text -->
+                <div class="mt-12 pt-8 border-t border-gray-200 max-w-2xl mx-auto">
+                    <p class="text-gray-500 text-sm">
+                        <i class="fa-solid fa-circle-question mr-2"></i>
+                        Need help? Contact us at 
+                        <a href="tel:061-691080" class="text-blue-600 hover:underline font-semibold">+977 9856021704</a> or 
+                        <a href="mailto:info@stsss.edu.np" class="text-blue-600 hover:underline font-semibold">info@stsss.edu.np</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- School Branding Footer -->
+        <div class="absolute bottom-6 left-0 right-0 text-center">
+            <p class="text-sm text-gray-400">
+                <span class="font-semibold text-[#0A1535]">Shree Tribhuwan Shanti Secondary School</span> • Est. 1969
+            </p>
+        </div>
+
+    </main>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 10000);
+    </script>
+
+  </body>
+</html>
